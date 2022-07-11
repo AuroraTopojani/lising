@@ -1,0 +1,93 @@
+<template>
+  <section class="justify-content-center ms-5 ms-5">
+    <h1 class="text-center"><strong>Документација со барање за лизинг: ФИЗИЧКИ ЛИЦА</strong></h1>
+    <h4>Со пополнето барање за одобрување на лизинг,<strong>профактура на добавувачот и прифатена лизинг понуда</strong>, потребно е да се приложат и:</h4>
+    <ul >
+      <li v-for="docs in forIndividuals" :key="docs.title" >
+        <p class="mb-0">
+          {{ docs.description }}
+          <a :href="docs.link" target="”_blank”"
+          ><strong>{{ docs.linkedTxt }}</strong></a></p>
+      </li>
+    </ul>
+    <p>
+      <strong
+      >Документација треба да биде заверена со потпис и печат на овластеното
+        лице!
+      </strong>
+    </p>
+    <p>
+      <strong>AUTOWELT</strong> го задржува правото да побара дополнителна
+      документација за разгледување на барањата за одобрување на лизинг.
+    </p>
+    <hr />
+
+  </section>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+
+      forIndividuals: [
+        {
+          description: "ПРОФАКТУРА",
+          linkedTxt: "(превземи барање)",
+          link: "https://s-leasing.mk/content/%D0%91%D0%B0%D1%80%D0%B0%D1%9A%D0%B5%20%D0%B7%D0%B0%20%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D1%83%D0%B2%D0%B0%D1%9A%D0%B5%20%D0%BD%D0%B0%20%D0%BB%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3-Fizicki%20Lica.pdf",
+        },
+        {
+          description: "Копија од ЛИЧНА КАРТА",
+        },
+        {
+          description: "ПОТВРДА од работодавецот за редовен работен однос",
+        },
+        {
+          description: "Административна забрана од плата од работодавецот",
+          linkedTxt: "(превземи Административна забрана)",
+          link: "https://s-leasing.mk/content/%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%B1%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D0%B4%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%BE%D0%B4%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BE%D0%B4%D0%B0%D0%B2%D0%B5%D1%86%D0%BE%D1%82%20%D0%B2%D0%BE%20%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%20%D0%BD%D0%B0%20%D0%A8%D0%9F%D0%90%D0%A0%D0%9A%D0%90%D0%A1%D0%95%20%D0%9B%D0%98%D0%97%D0%98%D0%9D%D0%93%20%D0%94%D0%9E%D0%9E%20%D0%A1%D0%BA%D0%BE%D0%BF%D1%98%D0%B5.pdf",
+        },
+        {
+          description: "ИЗЈАВА за редовна отплата",
+          linkedTxt: "(превземи Изјава)",
+          link: "https://s-leasing.mk/content/%D0%98%D0%B7%D1%98%D0%B0%D0%B2%D0%B0%20%D0%B7%D0%B0%20%D1%80%D0%B5%D0%B4%D0%BE%D0%B2%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D0%BB%D0%B0%D1%82%D0%B0.pdf",
+        },
+        {
+          description: "Годишна даночна пријава (доколку барателот остварува дополнителни приходи)",
+        },
+        {
+          description: "Декларации за прием за бруто плата за последните 3 месеци",
+        },
+        {
+          description: "СОГЛАСНОСТ за извадок од Македонско Кредитно Биро",
+          linkedTxt: "(превземи согласност)",
+          link: "https://s-leasing.mk/content/%D0%A1%D0%BE%D0%B3%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%20%D0%B7%D0%B0%20%D0%B8%D0%B7%D0%B2%D0%B0%D0%B4%D0%BE%D0%BA%20%D0%BE%D0%B4%20%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%20%D0%9A%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%BD%D0%BE%20%D0%91%D0%B8%D1%80%D0%BE.pdf",
+          descriptionExtra: "Документација треба да биде заверена со потпис и печат на овластеното лице!"
+
+        },
+      ],
+    }
+  },
+
+      props: {
+        name: 'forIndividuals',
+        description: {
+          type: String,
+        },
+        linkTxt: {
+          type: String,
+        },
+        link: {
+          type: String,
+        },
+        descriptionExtra:{
+          type:String,
+        },
+        individualDocs: {
+          type: Array,
+        }
+
+      },
+
+};
+</script>
