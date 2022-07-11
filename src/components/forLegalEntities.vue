@@ -1,5 +1,5 @@
 <template>
-<section class="justify-content-center ms-5 ms-5">
+<section class="container">
 <h1 class="text-center"><strong>Документација со барање за лизинг: ПРАВНИ ЛИЦА</strong></h1>
 <h4>Со пополнето барање за одобрување на лизинг, профактура на добавувачот и прифатена лизинг понуда, потребно е да се приложат и:</h4>
 <ul >
